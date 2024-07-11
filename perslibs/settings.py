@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
-import os
+
 import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'perslib.apps.PerslibConfig',
     'rest_framework',
-     'corsheaders'
+    'corsheaders'
 ]
 
 MIDDLEWARE = [
@@ -125,9 +125,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
-MEDIA_URL = '/media/'
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'static/media')   #I added this here for profile pictures.
-MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'media')
+
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')   #I added this here pictures.
+# MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'mediafiles')
+
+# URL used to access the media
+# MEDIA_URL = '/media/'
+
+
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 

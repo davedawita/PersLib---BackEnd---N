@@ -19,8 +19,8 @@ from django.urls import path, include
 from rest_framework import routers
 from perslib.views import YearViewSet, TitleViewSet, PerslibViewSet
 # from perslib import views
-from django.conf import settings   #Added for the purpose of profile picture or /static in seetings.py
-from django.conf.urls.static import static    #ditto
+# from django.conf.urls.static import static 
+# from django.conf import settings   #Added for the purpose of profile picture or /static in settings.py
 
 #Notes:
 #ViewSets allow the developer to concentrate on modeling the state and interactions of the API, and leave the URL construction to be handled automatically. ViewSet classes are almost the same thing as View classes, except that they provide operations such as retrieve, or update, and not method handlers such as get or put.
@@ -35,7 +35,7 @@ router.register(r'title',TitleViewSet)
 router.register(r'perslib',PerslibViewSet) 
 
 urlpatterns = [
-    # path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls),
     path('', include(router.urls)), #Here, we include all the urls which are in the router above
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)    #This is added for adding pictures
+]
 

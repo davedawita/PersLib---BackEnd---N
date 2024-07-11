@@ -18,7 +18,7 @@ class TitleSerializer(serializers.HyperlinkedModelSerializer):
 
 
 class PerslibSerializer(serializers.HyperlinkedModelSerializer):    #The HyperlinkedModelSerializer class is similar to the ModelSerializer class except that it uses hyperlinks to represent relationships between entities in web API design, rather than primary keys.
-  image_url = serializers.ImageField(required=False)
+  # image_url = serializers.ImageField(required=False)
   class Meta:
     model = Perslib
-    fields = ['id', 'image_url', 'description', 'date', 'time']
+    fields = ['id', 'media', 'description', 'date', 'time']
