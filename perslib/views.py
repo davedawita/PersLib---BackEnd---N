@@ -14,7 +14,7 @@ from rest_framework import permissions
 # from rest_framework.response import Response
 # from rest_framework import status
 
-from rest_framework.parsers import MultiPartParser, FormParser, JSONParser
+# from rest_framework.parsers import MultiPartParser, FormParser, JSONParser
 
 #Note: ReadOnlyModelViewSet only provide 'read-only' actions:list & .retrieve(). But, ModelViewSet on the otherhand provides the actions: .list(), .retrieve(), .create(), .update(), .partial_update(), and .destroy().
 
@@ -38,4 +38,4 @@ class PerslibViewSet(viewsets.ModelViewSet):
   queryset = Perslib.objects.all()
   serializer_class = PerslibSerializer
   permission_classes = [permissions.AllowAny]
-  parser_classes = (MultiPartParser, FormParser, JSONParser)
+  # parser_classes = (MultiPartParser, FormParser, JSONParser)
