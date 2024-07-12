@@ -138,5 +138,5 @@ Full CRUD(Create, Read, Update, Delete) Functionality. </br>
 Please follow route guidelines above to go back to previous page. Refresh the page.   </br>
 
 <h2>Forthcoming Features</h2>
-In the future, we need users to be able to give access to family members so that the documents can be viewed by others. In addition, I need to learn Angular (FrontEnd Framework) and do this same app with it. Moreover, I need to create login and logout functionalities with super
+In the future, we need users to be able to give access to family members so that the documents can be viewed by others. In addition, I need to learn Angular (FrontEnd Framework) and do this same app with it. Moreover, I need to create login and logout functionalities with superuser account.
 
